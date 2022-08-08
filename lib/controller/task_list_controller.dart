@@ -10,7 +10,7 @@ RxInt count =0.obs;
 void increment() => count++;
 
   additems() {
-    items.add("Item:${items.length+1}");
+  
    
   }
    removeItem(index){
