@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:todo_app/views/my_shared_pref.dart';
 import 'package:todo_app/views/task_detail_screen.dart';
 import 'package:todo_app/views/task_list.dart';
 
@@ -23,8 +24,10 @@ class MyApp extends StatelessWidget {
        
         primarySwatch: Colors.blue,
       ),
-      initialRoute: '/task_list',
+      initialRoute: '/sp',
      getPages: [
+      GetPage(name: '/sp', page: ()=>const MySharedPref()),
+     // GetPage(name: '/task_detail', page: ()=>TaskDetail()),
       GetPage(name: '/task_list', page: ()=>TaskList()),
       GetPage(name: '/task_detail', page: ()=>TaskDetail()),
      ],
